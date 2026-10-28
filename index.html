@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry ❤️</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#180b20,#51152f,#160d25);
+  font-family:Georgia,serif;
+  color:white;
+  overflow:hidden;
+}
+.heart{
+  position:fixed;
+  color:#ff668d;
+  font-size:22px;
+  animation:float 6s linear infinite;
+  opacity:.7;
+}
+@keyframes float{
+  0%{transform:translateY(110vh) rotate(0deg);opacity:0}
+  20%{opacity:.8}
+  100%{transform:translateY(-15vh) rotate(360deg);opacity:0}
+}
+.card{
+  width:90%;
+  max-width:390px;
+  padding:32px 24px;
+  text-align:center;
+  border:1px solid #ff9bb755;
+  border-radius:25px;
+  background:#ffffff0c;
+  box-shadow:0 0 35px #ff3f7540;
+  backdrop-filter:blur(12px);
+  animation:appear 1.2s ease;
+}
+@keyframes appear{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.bigheart{
+  font-size:65px;
+  animation:beat 1.2s infinite;
+  margin-bottom:15px;
+}
+@keyframes beat{
+  50%{transform:scale(1.15)}
+}
+h1{
+  color:#ff9db8;
+  font-size:36px;
+  margin-bottom:18px;
+}
+p{
+  font-size:17px;
+  line-height:1.8;
+  color:#f9dce6;
+}
+.name{
+  color:#ff91b0;
+  font-style:italic;
+}
+button{
+  margin-top:25px;
+  border:none;
+  border-radius:30px;
+  padding:13px 28px;
+  background:linear-gradient(90deg,#ff527e,#ff8eae);
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  box-shadow:0 0 20px #ff527e55;
+}
+#message{
+  display:none;
+  margin-top:22px;
+  color:#ffd0df;
+  line-height:1.8;
+  font-size:17px;
+}
+.small{margin-top:22px;font-size:12px;color:#bd98aa}
+</style>
+</head>
+
+<body>
+<script>
+for(let i=0;i<22;i++){
+  let h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML=["♥","♡","💗"][i%3];
+  h.style.left=Math.random()*100+"%";
+  h.style.animationDelay=Math.random()*6+"s";
+  h.style.animationDuration=(5+Math.random()*5)+"s";
+  document.body.appendChild(h);
+}
+</script>
+
+<div class="card">
+  <div class="bigheart">💔</div>
+  <h1>I'm Sorry...</h1>
+
+  <p>
+    <span class="name">Dear You, ❤️</span><br><br>
+    Shayad meri kisi baat ne tumhe hurt kiya...
+    aur shayad main us waqt samajh nahi paaya
+    ki tum par kya beet rahi thi.<br><br>
+
+    Main apni galti ko justify nahi karna chahta.
+    Bas itna kehna hai ki
+    <b>I'm genuinely sorry. 🥺</b>
+  </p>
+
+  <button onclick="sorry()">Ek baat sunogi? 💌</button>
+
+  <div id="message">
+    Kaash main waqt ko thoda peeche kar paata,
+    aur woh baat kehne se pehle soch paata... ❤️‍🩹
+    <br><br>
+    Main tum par mujhe maaf karne ka pressure
+    nahi daalunga. Bas jab tumhara mann kare,
+    meri baat sun lena.<br><br>
+    <b>I'm sorry, dil se. 🥹❤️</b>
+    <br><br>
+    🌷 Take your time 🌷
+  </div>
+
+  <div class="small">Made with a sincere heart ❤️</div>
+</div>
+
+<script>
+function sorry(){
+  document.getElementById("message").style.display="block";
+  document.querySelector("button").textContent="Thank you for listening ❤️";
+  document.querySelector(".bigheart").textContent="❤️‍🩹";
+}
+</script>
+</body>
+</html>
